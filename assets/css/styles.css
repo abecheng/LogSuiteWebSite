@@ -338,9 +338,38 @@ a:hover {
   gap: 1.75rem 2rem;
 }
 
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.95rem;
+}
+
+.step__icon {
+  flex: 0 0 auto;
+  display: flex;
+  width: 2.85rem;
+  height: 2.85rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.15rem;
+  border-radius: 12px;
+  color: var(--bronze);
+  background: rgba(196, 165, 116, 0.12);
+  border: 1px solid rgba(196, 165, 116, 0.22);
+}
+
+.step__icon svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.step__body {
+  min-width: 0;
+}
+
 .step__num {
   display: block;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.55rem;
   font-size: 0.8rem;
   letter-spacing: 0.12em;
   color: var(--bronze);
