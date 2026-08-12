@@ -1,308 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MatterLog — Voice notes for every matter</title>
-  <meta name="description" content="MatterLog — voice notes for every matter. Record in the hallway, file by case, keep hearings and files in one place. On your device first; iCloud only when you sync. For solo and small-firm attorneys on iPhone, iPad, and Mac." />
-  <meta name="theme-color" content="#0B1F33" />
-  <link rel="icon" href="assets/images/logo.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>LogSuite — Voice notes for every field</title>
+  <meta name="description" content="LogSuite is a family of local-first voice memo apps for law, clinics, veterinary, insurance, finance, real estate, and auto inspection." />
+  <meta name="theme-color" content="#1a6b45" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/suite.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header" data-reveal>
-    <a class="brand" href="index.html">
-      <img class="brand__logo" src="assets/images/logo.png" alt="" width="36" height="36" />
-      <span class="brand__name">MatterLog</span>
-    </a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="#how">How it works</a>
-      <a href="#features">Features</a>
-      <a href="#privacy-first">Privacy</a>
-      <a href="contact.html">Contact</a>
-      <a class="nav-cta" href="#download">Get the app</a>
-    </nav>
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span>LogSuite</span>
+      </a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+      </div>
+    </div>
   </header>
 
-  <main id="main">
-    <section class="hero" aria-label="MatterLog">
-      <div class="hero__banner" aria-hidden="true">
-        <img src="assets/images/banner.jpg" alt="" width="2400" height="1600" />
-      </div>
-      <div class="hero__veil" aria-hidden="true"></div>
-      <div class="hero__content" data-reveal>
-        <p class="brand-mark">MatterLog</p>
-        <h1>Voice notes for every matter.</h1>
-        <p class="lede">
-          Capture in the hallway. File by case before you forget.
-          Hearings, files, and follow-ups — one matter, one place.
-          On your device first. iCloud only when you sync.
-        </p>
-        <div class="cta-row">
-          <a class="btn btn--primary btn--store" id="download" href="#download">
-            <svg class="btn__store-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <defs>
-                <linearGradient id="appStoreGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#2fb3ff"/>
-                  <stop offset="100%" stop-color="#0070f5"/>
-                </linearGradient>
-              </defs>
-              <rect width="24" height="24" rx="5.4" fill="url(#appStoreGrad)"/>
-              <g fill="#fff">
-                <path d="M11.9 4.85 7.55 13.7h2.05l.85-1.7h3.1l.85 1.7h2.05L12.1 4.85h-.2zm.1 2.85 1.15 2.3h-2.3l1.15-2.3z"/>
-                <path d="M5.85 15.55c.5.9 1.45 1.5 2.55 1.5.5 0 1-.12 1.4-.35l-1.05-2.1H5.85zm10.95 0h-2.9l-1.05 2.1c.4.23.9.35 1.4.35 1.1 0 2.05-.6 2.55-1.5z"/>
-                <path d="M16.7 9.55c-.32-.18-.7-.28-1.08-.28-.52 0-1 .18-1.38.5l1.85 3.7c.52-.22.9-.65 1.12-1.18.32-.7.18-1.55-.51-2.74z"/>
-              </g>
-            </svg>
-            Download on the App Store
-          </a>
-          <a class="btn btn--ghost" href="#how">See how it works</a>
-        </div>
-      </div>
-    </section>
+  <main id="main" class="wrap">
+    <header class="hero">
+      <h1>LogSuite</h1>
+      <p class="lede">
+        <span data-i18n-en>Voice-first, private memos for your industry. Same local-first core — a separate app for each field.</span>
+        <span data-i18n-zh>语音优先、本地私有的行业备忘系列。同一套 Local-First 能力，按行业出独立 App。</span>
+      </p>
+    </header>
 
-    <section class="section section--how" id="how">
-      <div class="section__intro" data-reveal>
-        <h2>From hallway to hearing — without opening a practice suite.</h2>
-        <p>MatterLog is a personal memo tool, not a firm OS. Capture first. Organize when you have a minute.</p>
-      </div>
-      <ol class="steps">
-        <li class="step" data-reveal>
-          <span class="step__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3z"/>
-              <path d="M19 11a7 7 0 0 1-14 0"/>
-              <path d="M12 18v3"/>
-              <path d="M8 21h8"/>
-            </svg>
-          </span>
-          <div class="step__body">
-            <span class="step__num">01</span>
-            <h3>Record</h3>
-            <p>Audio lands on-device the moment you stop. Crash, call, or kill the app — the recording is already saved.</p>
+    <p class="section-label">
+      <span data-i18n-en>Apps</span>
+      <span data-i18n-zh>应用</span>
+    </p>
+
+    <ul class="apps">
+      <li>
+        <a class="app" href="matterlog/">
+          <div class="app__row">
+            <div>
+              <h2 class="app__name">MatterLog</h2>
+              <p class="app__industry">
+                <span data-i18n-en>Law · hearings &amp; case notes</span>
+                <span data-i18n-zh>律政 · 庭审笔录与案件备忘</span>
+              </p>
+            </div>
+            <span class="app__badge">
+              <span data-i18n-en>Open</span>
+              <span data-i18n-zh>进入</span>
+            </span>
           </div>
-        </li>
-        <li class="step" data-reveal data-reveal-delay="80">
-          <span class="step__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 10v4"/>
-              <path d="M8 7v10"/>
-              <path d="M11 4v16"/>
-              <path d="M14 7v10"/>
-              <path d="M17 9v6"/>
-              <path d="M20 11v2"/>
-            </svg>
-          </span>
-          <div class="step__body">
-            <span class="step__num">02</span>
-            <h3>Transcribe</h3>
-            <p>Speech turns into text in the background. Review later. Edit when it matters. Choose the language you speak.</p>
-          </div>
-        </li>
-        <li class="step" data-reveal data-reveal-delay="160">
-          <span class="step__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 20V7a1 1 0 0 1 1-1h5l2 2h7a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/>
-              <path d="M9 14l2 2 4-4"/>
-            </svg>
-          </span>
-          <div class="step__body">
-            <span class="step__num">03</span>
-            <h3>File &amp; follow up</h3>
-            <p>Assign notes to a matter. Add schedule, to-dos, and case files. Optionally sync deadlines to Apple Calendar and Reminders.</p>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <section class="section section--features" id="features">
-      <div class="section__intro" data-reveal>
-        <h2>What you get day to day.</h2>
-        <p>
-          Everything below is built around one idea: each matter holds the memos, dates, files, and follow-ups
-          you need between courts — without a heavy practice-management suite.
-        </p>
-      </div>
-      <div class="feature-grid">
-        <article class="feature" data-reveal>
-          <h3>Matters, Inbox &amp; Review</h3>
-          <p>
-            Dump a voice note into Inbox, then file it under the right matter.
-            Review transcripts, summaries, and edits on your schedule.
-          </p>
-        </article>
-        <article class="feature" data-reveal data-reveal-delay="60">
-          <h3>Schedule &amp; to-dos</h3>
-          <p>
-            Pin hearings and dated tasks on the matter. MatterLog can write them to Apple Calendar and Reminders
-            when you turn sync on — and remove its copies when you turn sync off.
-          </p>
-        </article>
-        <article class="feature" data-reveal data-reveal-delay="120">
-          <h3>Case files</h3>
-          <p>
-            Attach PDFs, images, and common office documents to a matter.
-            Preview, rename, share, or save out — video and installers stay blocked on purpose.
-          </p>
-        </article>
-        <article class="feature" data-reveal data-reveal-delay="60">
-          <h3>Search across the casebook</h3>
-          <p>
-            Find matters, transcripts, schedule items, to-dos, and file names from Today.
-            Open results straight into the right matter tab.
-          </p>
-        </article>
-        <article class="feature" data-reveal data-reveal-delay="120">
-          <h3>Export PDF &amp; private backup</h3>
-          <p>
-            Share a printable PDF with only the sections you check — never full voice transcripts.
-            Or pack a private zip of the whole matter (metadata, audio, attachments) for your own archive.
-          </p>
-        </article>
-        <article class="feature" data-reveal data-reveal-delay="180">
-          <h3>Home Screen widgets (iPhone)</h3>
-          <p>
-            Due Today for today’s hearings and tasks. Record to jump straight into a new voice memo —
-            including a Lock Screen option.
-          </p>
-        </article>
-        <article class="feature" data-reveal data-reveal-delay="60">
-          <h3>Optional AI organize</h3>
-          <p>
-            Bring your own API key. Ask AI to draft a summary, fields, schedule, and to-dos from a transcript —
-            then edit and confirm before anything is saved. Keys stay on your device.
-          </p>
-        </article>
-        <article class="feature" data-reveal data-reveal-delay="120">
-          <h3>iPhone, iPad &amp; Mac</h3>
-          <p>
-            Same matter book across Apple devices. Text syncs via your iCloud private database when available;
-            recordings and attachments live in iCloud Drive folders you can see in Files / Finder.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section--privacy" id="privacy-first">
-      <div class="privacy-band" data-reveal>
-        <h2>Private by default.</h2>
-        <p>
-          No MatterLog account. No MatterLog-operated case server.
-          Notes are saved on your device first. When iCloud is available, structured text can sync through
-          your iCloud private database, and audio and attachments can use iCloud Documents — so you stay in control.
-          Optional AI calls go only to the provider you configure — with your own key.
-        </p>
-        <a class="text-link" href="privacy.html">Read the Privacy Policy</a>
-      </div>
-    </section>
-
-    <section class="section section--screens" id="screens">
-      <div class="section__intro" data-reveal>
-        <h2>Built around your matters.</h2>
-        <p>Today, Matters, Inbox, Files, and Review — a short path from voice dump to filed note.</p>
-      </div>
-
-      <div class="screen-carousel" data-reveal data-carousel>
-        <button class="screen-carousel__nav screen-carousel__nav--prev" type="button" aria-label="Previous screenshot">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
-        </button>
-
-        <div class="screen-carousel__viewport">
-          <ul class="screen-carousel__track">
-            <li class="screen-carousel__slide is-active">
-              <img src="assets/images/1.png" alt="MatterLog screenshot 1" width="390" height="844" />
-            </li>
-            <li class="screen-carousel__slide">
-              <img src="assets/images/2.png" alt="MatterLog screenshot 2" width="390" height="844" />
-            </li>
-            <li class="screen-carousel__slide">
-              <img src="assets/images/3.png" alt="MatterLog screenshot 3" width="390" height="844" />
-            </li>
-            <li class="screen-carousel__slide">
-              <img src="assets/images/4.png" alt="MatterLog screenshot 4" width="390" height="844" />
-            </li>
-            <li class="screen-carousel__slide">
-              <img src="assets/images/5.png" alt="MatterLog screenshot 5" width="390" height="844" />
-            </li>
-            <li class="screen-carousel__slide">
-              <img src="assets/images/6.png" alt="MatterLog screenshot 6" width="390" height="844" />
-            </li>
-            <li class="screen-carousel__slide">
-              <img src="assets/images/7.png" alt="MatterLog screenshot 7" width="390" height="844" />
-            </li>
-            <li class="screen-carousel__slide">
-              <img src="assets/images/8.png" alt="MatterLog screenshot 8" width="390" height="844" />
-            </li>
-            <li class="screen-carousel__slide">
-              <img src="assets/images/9.png" alt="MatterLog screenshot 9" width="390" height="844" />
-            </li>
-          </ul>
-        </div>
-
-        <button class="screen-carousel__nav screen-carousel__nav--next" type="button" aria-label="Next screenshot">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-        </button>
-
-        <div class="screen-carousel__dots" role="tablist" aria-label="Screenshot pages"></div>
-      </div>
-    </section>
-
-    <section class="section section--not" data-reveal>
-      <h2>What MatterLog is not</h2>
-      <ul class="not-list">
-        <li>Not a full practice-management suite</li>
-        <li>Not team collaboration or shared firm workspaces</li>
-        <li>Not legal advice — you remain responsible for your files and duties</li>
-      </ul>
-    </section>
-
-    <section class="section section--cta" data-reveal>
-      <h2>Ready when you are between courts.</h2>
-      <p>MatterLog for iPhone, iPad, and Mac.</p>
-      <div class="cta-row" style="justify-content: center;">
-        <a class="btn btn--primary btn--store" href="#download">
-          <svg class="btn__store-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <defs>
-              <linearGradient id="appStoreGrad2" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#2fb3ff"/>
-                <stop offset="100%" stop-color="#0070f5"/>
-              </linearGradient>
-            </defs>
-            <rect width="24" height="24" rx="5.4" fill="url(#appStoreGrad2)"/>
-            <g fill="#fff">
-              <path d="M11.9 4.85 7.55 13.7h2.05l.85-1.7h3.1l.85 1.7h2.05L12.1 4.85h-.2zm.1 2.85 1.15 2.3h-2.3l1.15-2.3z"/>
-              <path d="M5.85 15.55c.5.9 1.45 1.5 2.55 1.5.5 0 1-.12 1.4-.35l-1.05-2.1H5.85zm10.95 0h-2.9l-1.05 2.1c.4.23.9.35 1.4.35 1.1 0 2.05-.6 2.55-1.5z"/>
-              <path d="M16.7 9.55c-.32-.18-.7-.28-1.08-.28-.52 0-1 .18-1.38.5l1.85 3.7c.52-.22.9-.65 1.12-1.18.32-.7.18-1.55-.51-2.74z"/>
-            </g>
-          </svg>
-          Download on the App Store
         </a>
-        <a class="btn btn--ghost" href="contact.html">Contact us</a>
-      </div>
-    </section>
+      </li>
+      <li>
+        <a class="app" href="scribelog/">
+          <div class="app__row">
+            <div>
+              <h2 class="app__name">ScribeLog</h2>
+              <p class="app__industry">
+                <span data-i18n-en>Clinic · SOAP notes &amp; follow-ups</span>
+                <span data-i18n-zh>医疗 · SOAP 病历与复诊提醒</span>
+              </p>
+            </div>
+            <span class="app__badge">
+              <span data-i18n-en>Open</span>
+              <span data-i18n-zh>进入</span>
+            </span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <div class="app app--soon" aria-disabled="true">
+          <div class="app__row">
+            <div>
+              <h2 class="app__name">VetLog</h2>
+              <p class="app__industry">
+                <span data-i18n-en>Veterinary · pet SOAP &amp; vaccines</span>
+                <span data-i18n-zh>宠物/兽医 · 出诊 SOAP 与疫苗跟进</span>
+              </p>
+            </div>
+            <span class="app__badge app__badge--soon">Coming soon</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="app app--soon" aria-disabled="true">
+          <div class="app__row">
+            <div>
+              <h2 class="app__name">InsureLog</h2>
+              <p class="app__industry">
+                <span data-i18n-en>Insurance · needs &amp; renewals</span>
+                <span data-i18n-zh>保险经纪 · 保单需求与续保跟进</span>
+              </p>
+            </div>
+            <span class="app__badge app__badge--soon">Coming soon</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="app app--soon" aria-disabled="true">
+          <div class="app__row">
+            <div>
+              <h2 class="app__name">FinLog</h2>
+              <p class="app__industry">
+                <span data-i18n-en>Finance / tax · client meetings</span>
+                <span data-i18n-zh>财务/会计 · 面谈与抵扣项梳理</span>
+              </p>
+            </div>
+            <span class="app__badge app__badge--soon">Coming soon</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="app app--soon" aria-disabled="true">
+          <div class="app__row">
+            <div>
+              <h2 class="app__name">RealtyLog</h2>
+              <p class="app__industry">
+                <span data-i18n-en>Real estate · showings &amp; preferences</span>
+                <span data-i18n-zh>房产 · 带看与客户喜好</span>
+              </p>
+            </div>
+            <span class="app__badge app__badge--soon">Coming soon</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="app app--soon" aria-disabled="true">
+          <div class="app__row">
+            <div>
+              <h2 class="app__name">AutoLog</h2>
+              <p class="app__industry">
+                <span data-i18n-en>Used cars · inspection &amp; PDF</span>
+                <span data-i18n-zh>二手车 · 车况巡检与验车 PDF</span>
+              </p>
+            </div>
+            <span class="app__badge app__badge--soon">Coming soon</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <footer class="footer">
+      <p>
+        <span data-i18n-en>On your device first. iCloud only when you sync. No LogSuite account server.</span>
+        <span data-i18n-zh>本机优先；iCloud 仅在你开启同步时。LogSuite 不自建账号服务器。</span>
+      </p>
+      <p>
+        <a href="api-key.html">
+          <span data-i18n-en>Shared guide: get a free AI API key</span>
+          <span data-i18n-zh>各 App 共用：如何申请免费 API Key</span>
+        </a>
+      </p>
+    </footer>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer__brand">
-      <img src="assets/images/logo.png" alt="" width="28" height="28" />
-      <span>MatterLog</span>
-    </div>
-    <div class="footer__links">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Use</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <p class="footer__copy">
-      © <span id="year"></span> Yunjie Zhihui Information Technology (Langfang) Co., Ltd.
-      MatterLog is a personal productivity tool and is not a law firm.
-    </p>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/suite.js"></script>
 </body>
 </html>
