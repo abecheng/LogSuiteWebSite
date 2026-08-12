@@ -16,8 +16,8 @@
       const ctx = canvas.getContext("2d");
       if (!ctx) return;
       const g = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      g.addColorStop(0, "#2a2118");
-      g.addColorStop(1, "#1a1410");
+      g.addColorStop(0, "#fff8ec");
+      g.addColorStop(1, "#f0f2f5");
       ctx.fillStyle = g;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.strokeStyle = "rgba(237,150,14,0.55)";
@@ -25,12 +25,12 @@
       ctx.setLineDash([14, 10]);
       ctx.strokeRect(24, 24, canvas.width - 48, canvas.height - 48);
       ctx.setLineDash([]);
-      ctx.fillStyle = "#F4EBE0";
+      ctx.fillStyle = "#1a1c1f";
       ctx.font = `600 ${Math.max(22, canvas.width * 0.045)}px Manrope, sans-serif`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
       ctx.fillText(name, canvas.width / 2, canvas.height / 2 - 12);
-      ctx.fillStyle = "#C9B8A4";
+      ctx.fillStyle = "#5c6570";
       ctx.font = `${Math.max(16, canvas.width * 0.028)}px Manrope, sans-serif`;
       ctx.fillText("replace this file", canvas.width / 2, canvas.height / 2 + 28);
       img.src = canvas.toDataURL("image/png");
