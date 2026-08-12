@@ -16,11 +16,11 @@
       const ctx = canvas.getContext("2d");
       if (!ctx) return;
       const g = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      g.addColorStop(0, "#eaf7f3");
+      g.addColorStop(0, "#ecfdf3");
       g.addColorStop(1, "#f3f8f6");
       ctx.fillStyle = g;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.strokeStyle = "rgba(47,158,138,0.55)";
+      ctx.strokeStyle = "rgba(34,197,94,0.55)";
       ctx.lineWidth = 4;
       ctx.setLineDash([14, 10]);
       ctx.strokeRect(24, 24, canvas.width - 48, canvas.height - 48);
