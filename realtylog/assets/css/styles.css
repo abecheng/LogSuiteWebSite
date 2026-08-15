@@ -240,7 +240,6 @@ a:hover {
 
 .btn:hover {
   transform: translateY(-1px);
-  color: inherit;
 }
 
 .btn--primary {
@@ -248,9 +247,10 @@ a:hover {
   color: #ffffff;
 }
 
-.btn--primary:hover {
-  background: #f0a62a;
-  color: #1a1410;
+.btn--primary:hover,
+.btn--primary:focus-visible {
+  background: var(--bronze-deep);
+  color: #ffffff;
 }
 
 .btn--ghost {
@@ -263,6 +263,7 @@ a:hover {
 .btn--ghost:hover {
   border-color: color-mix(in srgb, var(--bronze) 70%, transparent);
   background: var(--paper);
+  color: var(--ink);
 }
 
 .btn__store-icon {
