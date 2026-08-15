@@ -1,17 +1,10 @@
-# Screenshot placeholders
+# LogSuite hub images
 
-Drop PNG/WebP files here using these **exact names**. Until then, the page shows a dashed box with the filename.
-
-| File | Suggested content |
+| File | Use |
 | --- | --- |
-| `logo.png` | ScribeLog app icon (square) |
-| `gemini-1.png` | Google AI Studio home / sign-in |
-| `gemini-2.png` | Get API key / Create API key |
-| `gemini-3.png` | Key created / copy |
-| `gemini-4.png` | ScribeLog Settings → AI with key pasted |
-| `openrouter-1.png` | OpenRouter sign-up (Google / GitHub) |
-| `openrouter-2.png` | Keys → Create key |
-| `openrouter-3.png` | Key + free model picker (`:free`) |
-| `openrouter-4.png` | ScribeLog Settings → provider OpenRouter |
+| `logo.png` | Nav + footer mark |
+| `banner.jpg` | Homepage hero atmosphere (full-bleed under nav) |
 
-Suggested size: phone screenshots ~1170×2532 or similar portrait; compress for web.
+Waveform art is drawn in `index.html` (SVG) inside the centered hero stage, left-aligned with copy.
+
+Replace `banner.jpg` / `logo.png` anytime; keep filenames.
