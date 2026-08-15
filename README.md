@@ -14,8 +14,9 @@ Open:
 - `http://localhost:8080/` — suite landing
 - `http://localhost:8080/matterlog/` — MatterLog
 - `http://localhost:8080/scribelog/` — ScribeLog
-- `http://localhost:8080/autolog/` — AutoLog
 - `http://localhost:8080/realtylog/` — RealtyLog
+- `http://localhost:8080/autolog/` — AutoLog
+- `http://localhost:8080/inspectlog/` — InspectLog
 
 ## Layout
 
@@ -24,8 +25,9 @@ Open:
 | `index.html` | LogSuite series LP |
 | `matterlog/` | MatterLog marketing site |
 | `scribelog/` | ScribeLog marketing site |
-| `autolog/` | AutoLog marketing site |
 | `realtylog/` | RealtyLog marketing site |
+| `autolog/` | AutoLog marketing site |
+| `inspectlog/` | InspectLog marketing site |
 
 AI API keys are configured in each app (BYOK). Guides open official Gemini / OpenRouter pages from an in-app sheet — this site does not host a key howto.
 
