@@ -1,15 +1,16 @@
 /* LogSuite suite landing */
 
 :root {
-  /* Cool blue suite — neutral hub; product accents stay on tiles */
-  --ink: #121826;
-  --ink-soft: #2a3344;
-  --muted: #5a6578;
-  --paper: #eef2f8;
-  --paper-deep: #e2e8f2;
-  --line: rgba(18, 24, 38, 0.1);
+  /* Clean contrast — white paper, ink text, saturated accents only */
+  --ink: #0f1420;
+  --ink-soft: #252c3b;
+  --muted: #5a6478;
+  --paper: #ffffff;
+  --paper-band: #f4f5f7;
+  --line: rgba(15, 20, 32, 0.12);
+  --line-strong: rgba(15, 20, 32, 0.22);
   --accent: #2f6fed;
-  --accent-deep: #1d4fbf;
+  --accent-deep: #1a4fc7;
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
   --font-body: "Instrument Sans", "Segoe UI", sans-serif;
   --max: 68rem;
@@ -73,14 +74,14 @@ a {
   top: 0;
   z-index: 20;
   backdrop-filter: blur(14px) saturate(1.1);
-  background: color-mix(in srgb, var(--paper) 82%, transparent);
+  background: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid transparent;
   transition: border-color 200ms ease, background 200ms ease;
 }
 
 .topbar.is-scrolled {
   border-bottom-color: var(--line);
-  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  background: rgba(255, 255, 255, 0.97);
 }
 
 .topbar__inner {
@@ -118,9 +119,9 @@ a {
   display: inline-flex;
   gap: 0.15rem;
   padding: 0.2rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-strong);
   border-radius: 0.55rem;
-  background: color-mix(in srgb, #fff 70%, transparent);
+  background: #fff;
 }
 
 .lang button {
@@ -270,28 +271,31 @@ a {
   }
 }
 
-/* Apps */
+/* Apps — crisp white tiles, saturated accents, no pastel washes */
 
 .apps-section {
-  padding: 1.75rem 0 3.5rem;
+  padding: 2.5rem 0 3.75rem;
+  background: var(--paper-band);
 }
 
 .apps-section__head {
-  margin-bottom: 1.5rem;
-  max-width: 36rem;
+  margin-bottom: 1.75rem;
+  max-width: 40rem;
 }
 
 .apps-section__head h2 {
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.45rem;
   font-family: var(--font-display);
-  font-size: clamp(1.65rem, 3vw, 2.1rem);
+  font-size: clamp(1.75rem, 3.2vw, 2.25rem);
   font-weight: 600;
   letter-spacing: -0.03em;
+  color: var(--ink);
 }
 
 .apps-section__head p {
   margin: 0;
   color: var(--muted);
+  font-size: 1.02rem;
 }
 
 .app-grid {
@@ -299,112 +303,112 @@ a {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 1rem;
+  gap: 0.85rem;
 }
 
 @media (min-width: 720px) {
   .app-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 1.1rem;
+    gap: 1rem;
   }
 }
 
 .app-tile {
   --tile: #2f6fed;
-  --tile-soft: #e8eef8;
   position: relative;
   display: grid;
   grid-template-columns: auto 1fr auto;
-  gap: 1rem;
-  align-items: start;
+  gap: 1.05rem;
+  align-items: center;
   text-decoration: none;
   color: inherit;
-  padding: 1.25rem 1.2rem;
-  border-radius: 1rem;
-  background:
-    linear-gradient(135deg, color-mix(in srgb, var(--tile-soft) 88%, #fff), #fff 55%);
-  border: 1px solid color-mix(in srgb, var(--tile) 14%, var(--line));
+  padding: 1.2rem 1.25rem 1.2rem 1.35rem;
+  border-radius: 0.85rem;
+  background: #fff;
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 1px 0 rgba(15, 20, 32, 0.04);
   transition:
-    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 220ms ease,
-    background 220ms ease;
+    transform 200ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 200ms ease,
+    box-shadow 200ms ease;
 }
 
 .app-tile::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.9rem;
-  bottom: 0.9rem;
-  width: 3px;
-  border-radius: 0 2px 2px 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 0.85rem 0 0 0.85rem;
   background: var(--tile);
-  opacity: 0.85;
 }
 
 a.app-tile:hover {
-  transform: translateY(-3px);
-  border-color: color-mix(in srgb, var(--tile) 35%, var(--line));
+  transform: translateY(-2px);
+  border-color: var(--tile);
+  box-shadow: 0 10px 28px rgba(15, 20, 32, 0.1);
 }
 
 a.app-tile:hover .app-tile__go {
-  transform: translateX(3px);
-  color: var(--tile);
+  transform: translateX(4px);
+  background: var(--tile);
+  border-color: var(--tile);
+  color: #fff;
 }
 
 .app-tile--soon {
   cursor: default;
-  opacity: 0.88;
   border-style: dashed;
-  background:
-    linear-gradient(135deg, color-mix(in srgb, var(--tile-soft) 55%, #fff), #f7f9fc 60%);
+  border-color: var(--line-strong);
+  box-shadow: none;
 }
 
 .app-tile--soon::before {
-  opacity: 0.4;
+  background: #9aa3b2;
 }
 
 .app-tile__badge {
   position: absolute;
-  top: 0.85rem;
-  right: 0.9rem;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  top: 0.9rem;
+  right: 0.95rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--muted);
-  background: color-mix(in srgb, var(--paper-deep) 80%, #fff);
-  border: 1px solid var(--line);
+  color: #fff;
+  background: var(--ink);
   border-radius: 999px;
-  padding: 0.2rem 0.55rem;
+  padding: 0.28rem 0.6rem;
 }
 
 .app-tile__logo {
-  width: 3.25rem;
-  height: 3.25rem;
-  border-radius: 0.85rem;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 0.8rem;
   object-fit: cover;
   background: #fff;
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--tile) 12%, transparent);
+  border: 1px solid var(--line);
 }
 
 .app-tile__logo--ghost {
   display: grid;
   place-items: center;
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  color: color-mix(in srgb, var(--tile) 70%, var(--muted));
-  background: color-mix(in srgb, var(--tile-soft) 70%, #fff);
-  box-shadow: none;
+  color: #fff;
+  background: #3d4f66;
+  border-color: transparent;
 }
 
 .app-tile__name {
-  margin: 0 0 0.15rem;
+  margin: 0 0 0.2rem;
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1.32rem;
   font-weight: 600;
   letter-spacing: -0.025em;
+  color: var(--ink);
 }
 
 .app-tile--soon .app-tile__name {
@@ -412,50 +416,68 @@ a.app-tile:hover .app-tile__go {
 }
 
 .app-tile__field {
-  margin: 0 0 0.45rem;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  margin: 0 0 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--tile);
 }
 
+.app-tile--soon .app-tile__field {
+  color: #5a6478;
+}
+
 .app-tile__blurb {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.94rem;
   color: var(--muted);
-  line-height: 1.45;
+  line-height: 1.48;
 }
 
 .app-tile__go {
   align-self: center;
-  font-size: 1.25rem;
-  color: color-mix(in srgb, var(--tile) 55%, var(--muted));
-  transition: transform 220ms ease, color 220ms ease;
+  display: grid;
+  place-items: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 999px;
+  font-size: 1.05rem;
+  line-height: 1;
+  color: var(--ink-soft);
+  background: var(--paper-band);
+  border: 1px solid var(--line-strong);
+  transition:
+    transform 200ms ease,
+    color 200ms ease,
+    background 200ms ease,
+    border-color 200ms ease;
 }
 
 /* Principles */
 
 .principles {
-  padding: 0 0 3.5rem;
+  padding: 3rem 0 3.75rem;
+  background: #fff;
 }
 
 .principles__inner {
-  padding: 2rem 0 0;
-  border-top: 1px solid var(--line);
+  padding: 0;
+  border-top: 0;
 }
 
 .principles__head {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.6rem;
   max-width: 36rem;
 }
 
 .principles__head h2 {
   margin: 0 0 0.4rem;
   font-family: var(--font-display);
-  font-size: clamp(1.45rem, 2.8vw, 1.85rem);
+  font-size: clamp(1.5rem, 2.8vw, 1.9rem);
   font-weight: 600;
   letter-spacing: -0.025em;
+  color: var(--ink);
 }
 
 .principles__head p {
@@ -475,7 +497,7 @@ a.app-tile:hover .app-tile__go {
 @media (min-width: 800px) {
   .principles__list {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.15rem;
+    gap: 1rem;
   }
 }
 
@@ -483,25 +505,24 @@ a.app-tile:hover .app-tile__go {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.55rem;
-  padding: 1.25rem 1.2rem 1.35rem;
-  border-radius: 1rem;
-  background:
-    linear-gradient(160deg, #fff 0%, color-mix(in srgb, var(--paper-deep) 45%, #fff) 100%);
-  border: 1px solid var(--line);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset;
+  gap: 0.6rem;
+  padding: 1.35rem 1.25rem 1.45rem;
+  border-radius: 0.85rem;
+  background: #fff;
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 1px 0 rgba(15, 20, 32, 0.04);
 }
 
 .principle-card__icon {
   display: grid;
   place-items: center;
-  width: 2.85rem;
-  height: 2.85rem;
-  border-radius: 0.85rem;
-  color: var(--accent-deep);
-  background: color-mix(in srgb, var(--accent) 12%, #fff);
-  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
-  margin-bottom: 0.15rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.75rem;
+  color: #fff;
+  background: var(--accent-deep);
+  border: 0;
+  margin-bottom: 0.2rem;
 }
 
 .principle-card__icon svg {
@@ -509,7 +530,7 @@ a.app-tile:hover .app-tile__go {
 }
 
 .principle-card strong {
-  font-size: 1.05rem;
+  font-size: 1.06rem;
   font-weight: 600;
   letter-spacing: -0.015em;
   color: var(--ink);
@@ -525,11 +546,12 @@ a.app-tile:hover .app-tile__go {
 
 .site-footer {
   padding: 0 0 2.75rem;
+  background: #fff;
 }
 
 .site-footer__inner {
   padding-top: 1.5rem;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--line-strong);
   color: var(--muted);
   font-size: 0.9rem;
 }
