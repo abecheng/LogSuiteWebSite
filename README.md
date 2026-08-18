@@ -19,6 +19,7 @@ Open:
 - `http://localhost:8080/inspectlog/` — InspectLog
 - `http://localhost:8080/fieldlog/` — FieldLog
 - `http://localhost:8080/claimlog/` — ClaimLog
+- `http://localhost:8080/insurelog/` — InsureLog
 
 ## Layout
 
@@ -32,6 +33,7 @@ Open:
 | `inspectlog/` | InspectLog marketing site |
 | `fieldlog/` | FieldLog marketing site |
 | `claimlog/` | ClaimLog marketing site |
+| `insurelog/` | InsureLog marketing site |
 
 AI API keys are configured in each app (BYOK). Guides open official Gemini / OpenRouter pages from an in-app sheet — this site does not host a key howto.
 
